@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @yield('header')
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">--}}
+        <link rel="stylesheet" href="/css/style.css">
     <style>
         html, body {
-            background-color: #fff;
+            /*background-color: #fff;*/
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;

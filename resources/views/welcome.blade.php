@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('header')
+    @stop
 @section('title')
 Track A Flight
 @stop
