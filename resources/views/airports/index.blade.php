@@ -2,7 +2,8 @@
 
 @section('content')
     <h1>Airports</h1>
-    <table border="1px" bgcolor="#d3d3d3">
+
+    <table border="1px" bgcolor=#696969>
         <tr>
             <th>Identifier</th>
             <th>Name</th>

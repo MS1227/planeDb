@@ -3,12 +3,12 @@
 <head>
     @yield('header')
     <meta charset="utf-8">
-    {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">--}}
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/css/style.css">
     <style>
         html, body {
             background-color: deepskyblue;
-            color: #636b6f;
+            color: whitesmoke;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
@@ -44,7 +44,7 @@
         }
 
         .links > a {
-            color: #636b6f;
+            color: whitesmoke;
             padding: 0 25px;
             font-size: 12px;
             font-weight: 600;
@@ -57,7 +57,7 @@
             margin-bottom: 30px;
         }
     </style>
-    <title>Track A Flight</title>
+    <title>Wayward Airlines</title>
 
 </head>
     <body>

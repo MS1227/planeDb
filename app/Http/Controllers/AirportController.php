@@ -10,4 +10,7 @@ class AirportController extends Controller
         $airports=Airport::all();
         return(view('airports.index')->with('airports',$airports));
     }
+    public function create() {
+        return(view('airports.create'));
+    }
 }
