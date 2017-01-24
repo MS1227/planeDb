@@ -17,3 +17,5 @@ Route::get('about', function(){
     return view('pages.about');
 });
 Route::get('/', 'PagesController@home');
+Route::resource('flights', 'FlightsController');
+Route::resource('airports', 'AirportController');

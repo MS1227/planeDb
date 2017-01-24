@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/css/style.css">
     <style>
         html, body {
-            /*background-color: #fff;*/
+            background-color: deepskyblue;
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
@@ -78,6 +78,7 @@
         <div class="content">
 
             <div class="title m-b-md">
+
                 @yield('title')
             </div>
 
