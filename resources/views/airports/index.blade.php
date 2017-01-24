@@ -23,4 +23,5 @@
         </tr>
     @endforeach
     </table>
+   <p>Click <a href="/airports/create">here</a> to add an airport</p>
 @stop

@@ -11,6 +11,18 @@ class AirportController extends Controller
         return(view('airports.index')->with('airports',$airports));
     }
     public function create() {
-        return(view('airports.create'));
+        return view('airports.create');
+    }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $airport=Airport::create($request->toArray());
+        $airport->save();
+        return redirect('airports');
     }
 }
