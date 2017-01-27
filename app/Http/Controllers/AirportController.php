@@ -25,4 +25,14 @@ class AirportController extends Controller
         $airport->save();
         return redirect('airports');
     }
+    public function show(Airport $airport)
+    {
+
+        return view('airports.show')->with('airport',$airport);
+    }
+    public function update(Request $request, Airport $airport)
+    {
+        $airport->update($request->all());
+        return redirect('airports');
+    }
 }

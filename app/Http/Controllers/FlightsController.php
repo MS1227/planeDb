@@ -49,6 +49,7 @@ class FlightsController extends Controller
      */
     public function show(Flight $flight)
     {
+
         return view('flights.show')->with('flight',$flight);
     }
 
@@ -58,9 +59,9 @@ class FlightsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id){
+    public function edit(Flight $flight){
 
-        //
+        return  view('flights.edit')->with('flight',$flight);
     }
 
     /**
@@ -70,9 +71,11 @@ class FlightsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request, Flight $flight){
+
+        $flight->update($request->all());
+
+        return redirect('flights');
     }
 
     /**
@@ -81,8 +84,9 @@ class FlightsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Flight $flight)
     {
-        //
+        $flight->delete();
+        return redirect('flights');
     }
 }
