@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <h1>Flights</h1>
+    <h1>Flight Information for {{$flight->tail}}</h1>
 
     <table border="1px" bgcolor="#696969">
         <th>Tail Number</th>

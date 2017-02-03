@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-    <h1>Create New Flight</h1>
-    <form action="/flights" method="post">
+    <h1 align="center">Create New Flight</h1>
+    <form align="center" action="/flights" method="post">
         {{csrf_field()}}
         tail: <input type="text" name="tail"> <br>
         departure: <input type="text" name="departure"> <br>

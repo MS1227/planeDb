@@ -11,6 +11,7 @@
         <input type="submit" name="create">
 
     </form>
+    <a href="/airports/">Airports</a>
         @if(count($errors))
          <ul>
              @foreach($errors->all() as $error)

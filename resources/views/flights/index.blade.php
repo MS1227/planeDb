@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
- <h1>Flights</h1>
- Click tail number to see more.
- <table border="1px" bgcolor="#696969">
+ <h1 align="center">Flights</h1>
+ <center>Click tail number to see more.</center>
+ <table align="center" border="1px" bgcolor="#696969">
      <th>Tail Number</th>
      <th>Departure Airport</th>
      <th>Destination Airport</th>

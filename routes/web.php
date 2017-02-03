@@ -19,5 +19,6 @@ Route::group(['middleware' => ['web']], function(){
     Route::post('/flights/{flight}', 'FlightsController@update');
     Route::post('/flights/{flight}', 'FlightsController@destroy');
     Route::post('/airports/{airport}', 'AirportsController@update');
+    Route::post('/airports/{airport}', 'AirportsController@destroy');
 });
 
