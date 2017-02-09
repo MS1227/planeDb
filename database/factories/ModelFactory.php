@@ -22,3 +22,29 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Airport::class, function (Faker\Generator $faker) {
+    return [
+        'identifier' => strtoupper($faker->randomLetter . $faker->randomLetter . $faker->randomLetter . $faker->randomLetter),
+        'name' => $faker->name . ' Airport',
+        'is_controlled' => $faker->boolean,
+        'num_runways' => $faker->randomDigitNotNull,
+    ];
+});
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Flight::class, function (Faker\Generator $faker) {
+    return [
+        'tail' => strtoupper($faker->randomLetter . $faker->randomLetter . $faker->randomLetter . $faker->randomLetter . $faker->randomLetter),
+        'departure_airport_id' => function () {
+            return factory(App\Airport::class)->create()->id;
+        },
+        'destination_airport_id' => function () {
+            return factory(App\Airport::class)->create()->id;
+        },
+        'souls' => $faker->randomDigitNotNull,
+        'departed_at' => $faker->dateTimeThisCentury,
+    ];
+});

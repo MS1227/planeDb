@@ -17,7 +17,7 @@ class CreateAirportsTable extends Migration
             $table->increments('id');
             $table->string('identifier',4);
             $table->string('name');
-            $table->boolean('isControlled')->default(0);
+            $table->boolean('is_controlled')->default(0);
             $table->unsignedInteger('num_runways');
             $table->timestamps();
         });

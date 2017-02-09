@@ -14,12 +14,7 @@
         <tr>
             <td>{{$airport->identifier}}</td>
             <td>{{$airport->name}}</td>
-            <td align="center">
-                @if($airport->isControlled == 1)
-                    {{"Yes"}}
-                @else {{"No"}}
-                @endif
-            </td>
+            <td align="center">{{$airport->controlled}}</td>
             <td align="center">{{$airport->num_runways}}</td>
         </tr>
 

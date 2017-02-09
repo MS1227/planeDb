@@ -9,7 +9,7 @@ class AirportController extends Controller
     public function index() {
         $airports=Airport::all();
         return(view('airports.index')->with('airports',$airports));
-    }
+}
     public function create() {
         return view('airports.create');
     }
@@ -20,9 +20,12 @@ class AirportController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+
         $this->validate($request, [
+
             'name' => 'required | unique:airports',
-            'identifier' => 'required | unique:airports'
+            'identifier' => 'required | unique:airports',
+            'num_runways' =>'required',
         ]);
         $airport=Airport::create($request->toArray());
         $airport->save();
