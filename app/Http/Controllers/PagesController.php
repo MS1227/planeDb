@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class PagesController extends Controller
 {
     public function home()
     {
-        $data = ['one', 'two', 'three'];
-        return view('welcome', compact('data'));
+        Session::flash('status','hello there');
+        return view('welcome');
     }
-    public function about()
-    {
-        return view('about');
-    }
+
 }

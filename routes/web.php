@@ -11,7 +11,11 @@
 |
 */
 
-
+Auth::routes();
 Route::get('/', 'PagesController@home');
 Route::resource('flights', 'FlightsController');
 Route::resource('airports', 'AirportController');
+
+
+
+Route::get('/home', 'HomeController@index');

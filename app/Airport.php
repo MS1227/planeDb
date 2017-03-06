@@ -25,7 +25,7 @@ class Airport extends Model
      */
     public function getControlledAttribute()
     {
-        return ($this->isControlled == 1) ? "Yes" : "No";
+        return ($this->is_controlled == 1) ? "Yes" : "No";
     }
 
     /**

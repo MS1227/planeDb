@@ -6,7 +6,7 @@
         {{csrf_field()}}
         Name:<input type="text" name="name" value="{{old('name')}}"><br>
         Identifier:<input type="text" name="identifier" value="{{old('identifier')}}"><br>
-        Controlled?:<input type="checkbox" value="1" name="isControlled"><br>
+        Controlled?:<input type="checkbox" value="1" name="is_controlled"><br>
         No. of Runways:<input type="text" name="num_runways" value="{{old('num_runways')}}"><br>
         <input type="submit" name="create">
 
